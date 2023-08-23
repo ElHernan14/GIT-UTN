@@ -1,0 +1,29 @@
+#caja{
+    border: 3px solid black;
+    height: 250px;
+    width: 100%;
+    flex-direction: row;
+    display: inline-flex;
+}
+
+.cuadro1{
+    background-color: red;
+    width:250px ;
+    height: 250px;
+}
+
+.cuadro2{
+    background-color: blue;
+    width:250px ;
+    height: 250px;
+    position: absolute;
+    left: 44%;
+}
+
+.cuadro3{
+    background-color: green;
+    width:250px ;
+    height: 250px;
+    position: absolute;
+    left: 87%;
+}
