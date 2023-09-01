@@ -1,0 +1,61 @@
+/***************************PAGINA PRINCIPAL***************************/
+body{
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(22,29,142,1) 73%, rgba(0,212,255,1) 100%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+footer{
+    background-color: black;
+    clear: both;
+    color: whitesmoke;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 30px;
+}
+
+.holder{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+}
+
+/******************* SECCION CONTACTOS ******************************/
+.contactos{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+
+.contactos .info h5{
+    font-weight: 600;
+    font-size: 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.contactos .info p{
+    font-size: 13px;
+}
+
+.contactos img{
+    border-radius: 13px;
+    display: block;
+    max-width: 225px;
+}
+
+#inputFiltro::placeholder {
+    color: lightsteelblue;
+    opacity: 1;
+}

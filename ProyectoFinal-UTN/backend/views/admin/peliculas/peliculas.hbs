@@ -1,0 +1,84 @@
+<div class="container" style="margin:50px auto;">
+    <div class="card text-bg-dark border-info">
+        <div class="card-header">
+            {{!-- Fila 1--}}
+            <div class="row">
+                <div class="col mx-3">
+                    <h5 style="margin-top:15px;" class="text-right">Hola {{usuario}}</h5>
+                </div>
+            </div>
+            {{!-- Fila 2--}}
+            <div class="row">
+                <div class='col-12'>
+                    <h3 class="card-title mx-3">Listado de Peliculas</h3>
+                </div>
+                <div class='col-12 mb-3'>
+                    <div class="card text-bg-dark mb-3" style={cardStyle}>
+                        <div class="card-body mt-2">
+                            <div class='col-12 row'>
+                                <form action="/admin/peliculas/filtroPeliculas" method="post" class="col-9 row">
+                                    <div class='col-8'>
+                                        <div class="form-group mb-3 mx-1 row">
+                                            <input type="text" id='inputFiltro' style="background-color: black; color: white;" class="form-control border-0" 
+                                            name="buscador" maxLength="255" placeholder="Titulo, director"/>
+                                        </div>
+                                    </div>  
+                                    <div class='col-2'>
+                                        <div class="form-group mb-3 row mx-0">
+                                            <button class="btn btn-primary p-1" type="submit">
+                                                Buscar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="col-3">
+                                    <div class="form-group mb-3 text-end row mx-0">
+                                        <a class="btn btn-success" href="/admin/peliculas/agregar">Agregar pelicula</a>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            {{!-- Fila 3--}}
+            <div class="row">
+                <div class="col">
+                    <table class="table table-dark table-striped">
+                        <thead>
+                            <tr class="table-dark">
+                                <th scope="col">Titulo</th>
+                                <th scope="col">Director</th>
+                                <th scope="col">Año</th>
+                                <th scope="col">Género</th>
+                                <th scope="col">Calificación</th>
+                                <th scope="col">Imagen</th>
+                                <th scope="col" class="text-center">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            {{#each peliculas}}
+                            <tr id="{{id}}">
+                                <th scope="row">{{titulo}}</th>
+                                <th scope="row">{{director}}</th>
+                                <th scope="row">{{año}}</th>
+                                <th scope="row">{{genero}}</th>
+                                <th scope="row">{{calificacion}}</th>
+                                <th scope="row">{{{imagen}}}</th>
+                                <td class="text-center">
+                                    <a class="btn btn-sm btn-secondary" href="/admin/peliculas/modificar/{{id}}" title="Editar">
+                                    <i class="fa fa-pencil"></i></a>
+                                    <a class="btn btn-sm btn-secondary" href="/admin/peliculas/eliminar/{{id}}" title="Eliminar">
+                                    <i class="fa fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

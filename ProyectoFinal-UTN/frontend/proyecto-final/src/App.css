@@ -1,0 +1,154 @@
+/***************************PAGINA PRINCIPAL***************************/
+body{
+  background: url("./../public/images/fondobg.jpg");
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0;
+}
+
+footer{
+  background-color: #333;
+  clear: both;
+  color: #ccc;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 20px;
+  
+}
+
+.holder{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+h1, h2, h3, p {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+/*--------------------SECCIÓN PELICULAS------------------------*/
+.padded {
+  padding: 0px;
+  text-align:center
+}
+
+.wrapper-grey {
+  background: black;
+}
+
+.card {
+  height: 400px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+}
+
+.card-description {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 0px;
+  font-size: 15px;
+  background: hsl(0, 0%, 0%, 0.5);
+}
+
+.card-description p{
+  font-size: 16px;
+  color: aliceblue;
+}
+
+.starItem{
+  margin-bottom: 0.5px;
+  margin-left: 1px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index:2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover{
+  opacity: 0.1;
+}
+
+#inputFiltro::placeholder {
+  color: lightsteelblue;
+  opacity: 1;
+}
+
+/******************* CONTACTO ******************************/
+.contacto{
+  display: flex;
+  gap: 24px;
+}
+
+.contacto div{
+  width: 100%;
+  height: 100%;
+}
+
+.datos p{
+  font-size: 14px;
+}
+
+.datos ul li{
+  font-size: 13px;
+}
+
+.formulario .form-div{
+  display: flex;
+}
+
+.formulario .form-div label{
+  min-width: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.formulario .form-div:nth-child(4){
+  align-items: start;
+}
+
+.formulario textarea{
+  resize: none;
+  height: 150px;
+}
+
+.formulario input[type="submit"]{
+  background: #6da9ed;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 16px;
+  padding: 6px 20px;
+  width: auto;
+  position: relative;
+  left: 5rem;
+  cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover{
+  background-color: #2e64a1;
+}

@@ -1,0 +1,29 @@
+<div class="container" style="margin:50px auto;">
+    <main class="holder">
+        <div class="card text-bg-dark mb-3">
+            <div class="card-header">
+                <h4>Comentarios de Usuarios</h4>
+                <p>(Estos contactos se cargan desde el frontend de React.)</p> 
+            </div>
+            <div class="card-body text-bg-primary">
+                {{#each contactos}}
+                    <div class="contactos" id="{{id}}">
+                        {{{imagen}}}
+                        <div class="info col-9 row">
+                            <div class="card text-bg-dark border-success mb-3" style="width: 100%; height: 100%;">
+                                <div class="card-header">
+                                    <h5>{{nombre}} <span class="badge rounded-pill  text-bg-success">{{email}}</span></h5>
+                                </div>
+                                <div class="card-body m-0">
+                                    <p>
+                                        {{comentario}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    </main>
+</div>

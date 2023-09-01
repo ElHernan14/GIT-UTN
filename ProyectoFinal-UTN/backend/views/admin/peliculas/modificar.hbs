@@ -1,0 +1,68 @@
+<div class="container" style="margin: 100px auto;">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <div class="card text-bg-dark border-info p-4">
+                <div class="card-header">
+                    <h4>Modificar la Pelicula</h4>
+                </div>
+                <div class="card-body">
+                    <form action="/admin/peliculas/modificar" method="post" style="margin-top: 25px;" enctype="multipart/form-data"> 
+                        {{#if error}}
+                            <h5 style="color: red;">{{message}}</h5>
+                        {{/if}}
+                        <input type="hidden" name="id" value="{{pelicula.id}}">
+                        <div class="form-group mb-3 row">
+                            <label for="titulo">Titulo</label>
+                            <input type="text" class="form-control" name="titulo" value="{{pelicula.titulo}}" placeholder="Titulo" required>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label for="sinopsis">Sinopsis</label>
+                            <textarea placeholder="Sinopsis" class="form-control" name="sinopsis" rows="3" required>{{pelicula.sinopsis}}</textarea>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label for="reparto">Reparto</label>
+                            <textarea placeholder="Reparto" class="form-control" name="reparto" rows="3" required>{{pelicula.reparto}}</textarea>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label for="director">Director</label>
+                            <input type="text" class="form-control" name="director" value="{{pelicula.director}}" placeholder="Director" required>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label for="ano">Año</label>
+                            <input type="number" class="form-control" name="ano" value="{{year}}" placeholder="Año" required>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label for="genero">Géneros</label>
+                            <input type="text" class="form-control" name="genero" value="{{pelicula.genero}}" placeholder="Géneros" required>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label for="calificacion">Calificación</label>
+                            <select class="form-select" name="calificacion" required>
+                                <option value="{{pelicula.calificacion}}" selected>{{pelicula.calificacion}}</option>
+                                {{#each puntuacion}}
+                                    <option value="{{n}}"><i class="fa-solid fa-star"></i> {{n}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <label for="link">Link de video</label>
+                            <input type="text" class="form-control" name="link" value="{{pelicula.link}}" placeholder="Link de Youtube" required>
+                        </div>
+                        <div class="form-group mb-3 row">
+                            <div class="form-group mb-3 row">
+                                <label for="imagen">Imagen</label>
+                                <input class="form-control" type="file" name="imagen" id="imagen"></input>
+                            </div>
+                            <div class="form-group mb-3 row">
+                                <h5 style="color: white;">Al seleccionar una imagen se reemplazará la actual.</h5>
+                                <input type="hidden" name="img_original"
+                                    value="{{pelicula.img_id}}">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type="submit">Modificar</button>
+                    </form>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>
